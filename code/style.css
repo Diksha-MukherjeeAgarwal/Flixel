@@ -1,0 +1,94 @@
+/* =========================================
+   Base Reset
+   ========================================= */
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;  /* Crucial: stops borders and scrollbars from breaking widths */
+}
+
+html, body {
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    min-height: 100vh; 
+}
+
+/* =========================================
+   Header
+   ========================================= */
+header{
+    position:relative; 
+    display:flex; 
+    width: 100%; 
+    height: 70px; 
+    background-color: #456741;
+}
+
+/* =========================================
+   Layout & Background
+   ========================================= */
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #fce9d9; 
+    background-image: url(../assets/background/background_pattern.png); 
+    background-repeat: repeat;
+    background-position: center; 
+    background-size: 55% auto; 
+}
+
+
+main{
+    flex: 1; /* Allows the main content area to grow and fill the available space between the header and footer */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding and border within it's specified area */
+}
+
+/* =========================================
+   Footer layered
+   ========================================= */
+
+footer{
+    position: relative; /* Allows for absolute positioning of child elements within the footer */
+    display:flex;
+    margin-top:auto; /* Pushes the footer to the bottom of the page */
+    width: 100%;
+    min-height: 640px; /* Setting up a transparent boundry */ 
+    overflow: hidden; /* Ensures that any content that exceeds the footer's dimensions is hidden */  
+    padding: 15px;
+}
+
+.footer-box{
+    position: absolute;
+    background-color: #456741;
+    width: 100%;
+    height: 220px; 
+    z-index: 2; /* Ensures the box appears above the background elements in the footer. */
+    bottom: 0px; /* Puts the element on the bottom */
+    left: 0;
+} 
+
+.footer-flowers{
+    position: absolute;
+    bottom: 125px;
+    left: 0px;
+    z-index: 3; 
+    width: 100%; 
+    height: 480px;
+}
+
+.footer-grass{
+    position: absolute; 
+    bottom: 155px;
+    left: 0px;
+    z-index: 1; 
+    width: 100%;
+    height: 1500px;
+}
