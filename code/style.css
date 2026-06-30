@@ -51,6 +51,85 @@ main{
     box-sizing: border-box; /* Ensures padding and border within it's specified area */
 }
 
+.tree-sketch{
+    position: relative; /* Allows for absolute positioning of child elements if needed */
+    width:550px;
+    height: 550px; /* Maintains the aspect ratio of the image */
+    border-radius: 490px; /* Adds rounded corners to the tree sketch for a softer appearance */
+    background-color: #ffffff;
+    border: 2px solid #d2a784;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px; /* Adds space below the tree sketch for better separation from other content */
+}
+
+.branch{
+    position: absolute; 
+    left: 10%;
+    top: -90px;
+    z-index: 0px; /* Ensures the branch appears above the tree sketch and roots */
+}
+
+.leaves{
+    position: relative;
+    height: 100%;
+}
+/*.leaf-1, .leaf-2, .leaf-3, .leaf-4, .leaf-5, .leaf-6, .leaf-7, .leaf-8, .leaf-9, .leaf-10, .leaf-11, .leaf-12{
+    position: absolute;
+    height: 90%;
+    margin: 0%;
+    top: -8px;
+    left: 18%;
+} */
+
+.leaf{
+     position: absolute;
+    height: 90%;
+    margin: 0%;
+    top: -4px;
+    left: 18.5%;
+}
+
+.grass-shadow{
+    position: absolute;
+    width: 70%;
+    top: -3.7%;
+    left: 15%;
+    z-index: 0px;
+    opacity: 85%;
+}
+
+.roots{
+    position: absolute; 
+    left: 10%;
+    top: -95px; /* Adjusts the vertical position of the roots image to better align with the tree sketch */
+    z-index: 3px;
+}
+
+.pose-down{
+    position: absolute; /* Allows for absolute positioning of child elements if needed */
+    height:105%;
+    top: -8.5%;
+    left: 15%;
+}
+
+.pose-up{
+    position: absolute;
+    height:90%;
+    top: -1%;
+    left: 20%;
+    opacity: 0%;
+} 
+
+
+.umbrella{
+    position: absolute; /* Allows for absolute positioning of child elements if needed */
+    height: 10%;
+    top: 44%;
+    left: 56.2%;
+    transform: rotate(-110deg); /* Adds a slight rotation to the umbrella image for a more dynamic and natural look */
+}
+
 /* =========================================
    Footer layered
    ========================================= */
