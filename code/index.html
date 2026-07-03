@@ -6,6 +6,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
     
     <title>BreatheSafe</title>
    
@@ -28,28 +32,23 @@
       </div>
 
 
-        <form class="search-box">
-          <input class="search-bar" type="text" placeholder="What are you Breathing...">
-          <button class="search-icon"> </button>
+        <form class="search-box js-search-box">
+          <input class="search-bar js-search-bar" type="text" placeholder="What are you Breathing...">
+          <button class="search-icon" type="submit"></button>
         </form>
 
     </header>
     
     <main>
-      
-      <!-- Temporary heading of the main -->
-      
-      <h1>BreatheSafe Dashboard</h1> 
 
-      <div class="tree-sketch">
-       
+      <div class="tree-sketch js-intraBox">
+
         <img src="../assets/tree/tree.png" alt="a branch of a tree" class="branch">
-   
+
         <img src="../assets/tree/roots.png" alt="colorful bleed down the tree" class="roots">
-        
-        <img src="../assets/tree/pose_up.png" alt="a branch of a tree" class="pose-up">
+
         <img src="../assets/tree/pose_down.png" alt="a branch of a tree" class="pose-down">
-       
+
         <img src="../assets/tree/umbrella.png" alt="a branch of a tree" class="umbrella">
 
         <img src="../assets/tree/grass_sihouette.png" class="grass-shadow">
@@ -70,19 +69,15 @@
           <img src="../assets/tree/leaf-12.png" class="leaf-12 leaf">
 
         </div>
-
-      </div>
-
-      <!-- This massive temporary box to force the page to scroll -->
-      
-      <div style="height: 1000px; background-color: rgba(255,255,255,0.5); margin: 20px; padding: 20px; border-radius: 10px;">
-          
-        <p>↓ Keep scrolling down to see the footer push away! ↓</p>
-          
-        <p>Once you see the scrollbar, you know your layout is working perfectly.</p>
       
       </div>
-    
+
+      <div class="div-buttons">
+        <button  class="buttons">Start Writing</button>
+        <button class="buttons" >Breathe</button>
+        <button class="buttons">Open Folder</button>
+      </div>
+
     </main>
    
     <footer>
