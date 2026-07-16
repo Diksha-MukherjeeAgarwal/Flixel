@@ -69,14 +69,127 @@ main{
     flex: 1; /* Allows the main content area to grow and fill the available space between the header and footer */
     flex-direction: column;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 15px;
     width: 100%;
     margin-bottom: 10px;
     box-sizing: border-box; /* Ensures padding and border within it's specified area */
 }
 
-/* =========================================
+.row-1{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.heading-box{
+    width:clamp(18.75rem, 1.372rem + 86.888vw, 53.125rem);
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 50px;
+    border: 2px solid #294726;
+    font-size: clamp(10px,50vw,28px);
+    font-family:sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.date-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1px;
+    margin-bottom: 5px;
+} 
+
+.date-box label{
+    color: #294726;
+    font-size: clamp(10px,50vw,24px);
+    font-family: "Caveat Brush", cursive;
+    font-weight: 650;
+    font-style: normal;
+    -webkit-text-stroke: 0.5px rgb(250, 248, 248);
+    line-height: 1;
+}
+
+.date-box input{
+    padding: 5px;
+    border-radius: 50px;
+    width: 90%;
+    color:#294726;
+    font-weight: bold;
+}
+
+.text-box{
+    resize: none;
+    field-sizing: content;
+    width: 100%;
+    min-height: clamp(18.75rem, 10.136rem + 45.942vw, 37.5rem);
+    line-height: 1;
+    padding: 0.5% 1% 1% 1%;
+    font-size: clamp(1rem, 0.77rem + 1.225vw, 1.5rem);
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    border: 3px dashed #d2a784;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+.text-box:focus{
+    outline: none;
+}
+
+.file-button{
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.buttons{
+    padding:0.5% 6.5% 0.5% 6.5%;
+    border-radius: 50px;
+    background-color: #ffffff;
+    border: 2px dashed #d2a784;
+    color: black;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.9rem;
+}
+
+/*==========================================
+  Animation 
+  ========================================== */
+
+.heading-box:hover{
+    box-shadow: 0px 2px 3px rgba(56, 81, 46, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+#start-date:hover{
+    box-shadow: 0px 2px 3px rgba(56, 81, 46, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.buttons:hover{
+    background-color: #456741;
+    color: #ffffff;
+    border: 2px solid #294726;
+    box-shadow: 1px 3px 4px rgba(56, 81, 46, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+
+/* ==================================#d2a784=======
    footer 
    ========================================= */
 
