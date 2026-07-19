@@ -9,6 +9,7 @@ const date= document.querySelector('#start-date');
 const textBox= document.querySelector('.js-text-box');
 const submitButton= document.querySelector('.js-button-submit');
 const cancelButton= document.querySelector('.js-button-cancel');
+const popupContainer= document.querySelector('.js-popup-container');
 
 
 // Event Listeners
@@ -85,6 +86,28 @@ function storefiles(heading,dateInput,textInput){
     console.log("Updated JSON Data:", updatedJsonString);
 
 
+}
+
+function confirmationPopup(event){
+    
+    popupContainer.style.display= 'flex'; //Showing up a confirmation popup
+    
+    //Selecting Buttons in popup
+    const yesButton= document.querySelector('.js-yes-button');
+    const noButton= document.querySelector('.js-no-button');
+
+    // Listening which key is pressed
+    yesButton.addEventListener('click',(event) =>{
+       
+        window.location.reload();
+    
+    });
+
+    noButton.addEventListener('click',(event) =>{
+      
+        popupContainer.style.display= 'none';
+    
+    });
 }
 
 // temporary function to remove file
