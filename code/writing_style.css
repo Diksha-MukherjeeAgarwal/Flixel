@@ -188,8 +188,73 @@ main{
     transition: 0.3s ease-in-out;
 }
 
+.popup-button:hover{
+    background-color: #456741;
+    color: #ffffff;
+    border: 2px solid #294726;
+    box-shadow: 1px 3px 4px rgba(56, 81, 46, 0.2);
+    transition: 0.3s ease-in-out;
+}
 
-/* ==================================#d2a784=======
+/*==========================================
+  Popup Container
+  ========================================== */
+.popup-container{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.popup-box{
+    height: 60%;
+    width:60%;
+    background-color: #ffffff;
+    border: 4px dashed #d2a784;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10%;
+}
+
+.popup-box p{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.popup-buttons{
+    width: 100%;
+    display: flex;
+    gap:clamp(0rem,-0.881rem + 9.17vw, 3.581rem);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.popup-button{
+    width: 8rem;
+    height: 4rem;
+    background-color:#ffffff;
+    border-radius: 50px;
+    border: 4px dashed #d2a784;
+    font-size: 1.5rem;
+    padding: 1% 5% 1% 5%;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/* =========================================
    footer 
    ========================================= */
 
