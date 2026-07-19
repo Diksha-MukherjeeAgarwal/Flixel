@@ -85,6 +85,7 @@ function storefiles(heading,dateInput,textInput){
     
     console.log("Updated JSON Data:", updatedJsonString);
 
+    window.location.reload();
 
 }
 
