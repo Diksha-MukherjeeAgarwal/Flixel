@@ -76,6 +76,55 @@ main{
     box-sizing: border-box; /* Ensures padding and border within it's specified area */
 }
 
+.folder-box{
+    width: 100%;
+    min-height: 100px;
+    background-color: #ffffff;
+    border:2px dashed #d2a784;
+    display: flex;
+    flex-direction: column;
+}
+
+.entry{
+    display:flex;
+    font-size: clamp(1.25rem,-0.236rem + 4.594vw, 3rem);
+    border: 1px solid gray;
+    padding: 5px;
+    padding-left: 10px;
+    cursor: pointer;
+
+}
+
+.entry p{
+    flex:1;
+    flex-wrap: wrap;
+}
+
+.open-button{
+    font-family: "Caveat Brush", cursive;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(0.625rem,-0.236rem + 4.594vw, 2.5rem);
+    padding: 0.5% 2% 0.5% 2%;
+    background-color: #456741;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+}
+
+/* =========================================
+   Animation
+   ========================================= */
+.entry:hover{
+    background-color: aliceblue;
+    box-shadow: 1px 3px 4px #294726;
+}
+
+.open-button:hover{
+    border:1px solid;
+    box-shadow: 1px 3px 4px #294726;
+}
 /* =========================================
    footer 
    ========================================= */
