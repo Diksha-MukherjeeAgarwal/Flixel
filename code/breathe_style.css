@@ -150,6 +150,34 @@ main{
     transform: rotate(53deg); /* Adds a slight rotation to the umbrella image for a more dynamic and natural look */
 }
 
+.play-buttons{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap:10px;
+}
+
+.button{
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ffffff;
+    border-radius: 50px;
+    font-size: 2rem;
+    padding: 5px 20px 6px 20px;
+    border: 3px dashed #d2a784;
+}
+/* =========================================
+   Animation
+   ========================================= */
+button:hover{
+    background-color: #456741;
+    color: #ffffff;
+    border: 3px solid #294726;
+    box-shadow: 1px 3px 4px rgba(56, 81, 46, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
 /* =========================================
    footer 
    ========================================= */
