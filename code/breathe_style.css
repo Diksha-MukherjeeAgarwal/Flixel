@@ -4,7 +4,7 @@
 *{
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box;  /* Crucial: stops borders and scrollbars from breaking widths */
+    box-sizing: border-box;  
 }
 
 html, body {
@@ -65,14 +65,89 @@ header{
    Main
    ========================================= */
 main{
-    flex: 1; /* Allows the main content area to grow and fill the available space between the header and footer */
+    flex: 1; 
     flex-direction: column;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     padding: 15px;
     width: 100%;
     margin-bottom: 10px;
-    box-sizing: border-box; /* Ensures padding and border within it's specified area */
+    box-sizing: border-box; 
+}
+
+.row-1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.tree-sketch{
+    display: flex;
+    position: relative;
+    width: clamp(10px, 50vw,400px);
+    height:  clamp(10px, 50vw,400px); 
+    border-radius: 490px;
+    background-color: #ffffff;
+    border: 2px solid #d2a784;
+    margin-bottom: 10px; 
+}
+
+.branch{
+    position: absolute; 
+    left: 15%;
+    top: -7%;
+    height: 100%;
+    z-index: 0px; 
+}
+
+.leaves{
+    position: relative;
+    height: 100%;
+    left: 18%;
+    top: 3px;
+}
+
+
+.leaf{
+    position: absolute;
+    height: 90%;
+    margin: 0%;
+    top: 1%;
+}
+
+.grass-shadow{
+    position: absolute;
+    width: 70%;
+    top: -4%;
+    left: 15%;
+    z-index: 0px;
+}
+
+.roots{
+    position: absolute; 
+    left: 15%;
+    top: -7%; 
+    z-index: 3px;
+    height: 100%;
+}
+
+.pose-down{
+    position: absolute; 
+    height:105%;
+    top: -8.5%;
+    left: 15%;
+}
+
+.umbrella{
+    position: absolute; /* Allows for absolute positioning of child elements if needed */
+    height: 13.3%;
+    top: 37.5%;
+    left: 58.9%;
+    transform: rotate(53deg); /* Adds a slight rotation to the umbrella image for a more dynamic and natural look */
 }
 
 /* =========================================
@@ -80,11 +155,11 @@ main{
    ========================================= */
 
 footer{
-    position: relative; /* Allows for absolute positioning of child elements within the footer */
-    margin-top:auto; /* Pushes the footer to the bottom of the page */
+    position: relative; 
+    margin-top:auto;
     width: 100%;
-    min-height: clamp(25rem, 18.6809rem + 31.5956vw, 37.5rem); /* Setting up a transparent boundry */ 
-    overflow: hidden; /* Ensures that any content that exceeds the footer's dimensions is hidden */  
+    min-height: clamp(25rem, 18.6809rem + 31.5956vw, 37.5rem); 
+    overflow: hidden; 
 }
 
 .footer-box{
@@ -92,8 +167,8 @@ footer{
     background-color: #456741;
     width: 100%;
     height: clamp(3.125rem, -2.2462rem + 26.8562vw, 13.75rem); 
-    z-index: 2; /* Ensures the box appears above the background elements in the footer. */
-    bottom: 0px; /* Puts the element on the bottom */
+    z-index: 2; 
+    bottom: 0px; 
     left: 0;
 } 
 
