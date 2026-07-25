@@ -75,6 +75,52 @@ main{
     box-sizing: border-box; 
 }
 
+.count-UI{
+    position: fixed;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.div-skipbutton{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 10%;
+
+}
+
+.div-skipbutton button{
+    font-size: 2rem;
+    padding: 0.5% 4% 0.5% 4%;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 3px dashed #d2a784;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.div-count{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: #456741;
+    color: #ffffff;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 650;
+    -webkit-text-stroke: 1px rgb(15, 1, 1);
+    font-style: normal;
+    border-radius: 50%;
+    font-size: 4.5rem;
+
+}
+
 .row-1{
 
     display: flex;
