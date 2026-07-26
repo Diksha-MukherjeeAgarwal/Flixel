@@ -224,6 +224,18 @@ button:hover{
     transition: 0.3s ease-in-out;
 }
 
+@keyframes blink {
+    0%,90%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+    95%,100%{
+        opacity: 0;
+    }
+}
+
 /* =========================================
    footer 
    ========================================= */

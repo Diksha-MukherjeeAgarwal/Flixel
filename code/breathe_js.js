@@ -1,12 +1,26 @@
-var count= document.querySelector('.js-div-count');
 const skipButton= document.querySelector('.js-skip-button');
-var popup= document.querySelector('.js-count-UI')
+var count= document.querySelector('.js-div-count');
+var popup= document.querySelector('.js-count-UI');
+var roots= document.querySelector('.js-roots');
 
 skipButton.addEventListener('click',(event) => {
    
     popup.style.display='none';
 
+    roots.style.animation= '';
+
 });
+
+roots.addEventListener('animationend',(event) => {
+
+    if (event.animationName === 'blink'){
+      
+        roots.style.opacity='0';
+        popup.style.display= 'none';
+
+    }
+   
+})
 
 setTimeout(counting, 600, 1);
 
@@ -34,6 +48,13 @@ function start(i){
     
     setTimeout( function removecount(i){
         count.style.display= 'none'
+        breatheon();
     },800,i);
+
+}
+
+function breatheon(){
+
+    roots.style.animation= 'blink 10s ease 5';
 
 }
