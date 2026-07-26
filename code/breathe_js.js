@@ -1,7 +1,12 @@
+//Buttons
 const skipButton= document.querySelector('.js-skip-button');
+
+// div elements
+const fadeLeavesButton=document.querySelector('.js-fadeleaves-button')
 var count= document.querySelector('.js-div-count');
 var popup= document.querySelector('.js-count-UI');
 var roots= document.querySelector('.js-roots');
+var leaves= document.querySelectorAll('.js-leaf');
 
 skipButton.addEventListener('click',(event) => {
    
@@ -58,3 +63,47 @@ function breatheon(){
     roots.style.animation= 'blink 10s ease 5';
 
 }
+
+
+// Button Functions
+fadeLeavesButton.addEventListener('click',(event) => {
+
+    fadeLeavesButton.classList.toggle('addAnimation');
+
+    changeLine= document.querySelector('.addAnimation');
+
+    if(fadeLeavesButton.classList.contains('addAnimation')){
+
+        changeLine.innerHTML= `flow leaves`;
+        
+        leaves.forEach(leaf => {
+        
+        leaf.style.opacity= '1';
+
+        p= (Math.random()*(0.8-0) +0).toFixed(1);
+
+        leaf.style.animation= 'fadeAndMove 4s ease-in-out forwards';
+
+        leaf.style.animationDelay= `${p}s`;
+    
+       });
+
+    }else{
+
+        fadeLeavesButton.innerHTML=`fade leaves`;
+
+        leaves.forEach(leaf => {
+
+          leaf.style.opacity= '0';
+
+          leaf.style.animation= 'appear 1s ease-in-out forwards';
+        
+          p= (Math.random()*(0.8-0) +0).toFixed(1);
+
+          leaf.style.animationDelay= `${p}s`;
+    
+        });
+
+    }
+
+})
