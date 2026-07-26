@@ -1,8 +1,9 @@
 //Buttons
 const skipButton= document.querySelector('.js-skip-button');
+const fadeLeavesButton= document.querySelector('.js-fadeleaves-button')
+const glowRootsButtons= document.querySelector('.js-glowroots-button')
 
 // div elements
-const fadeLeavesButton=document.querySelector('.js-fadeleaves-button')
 var count= document.querySelector('.js-div-count');
 var popup= document.querySelector('.js-count-UI');
 var roots= document.querySelector('.js-roots');
@@ -106,4 +107,29 @@ fadeLeavesButton.addEventListener('click',(event) => {
 
     }
 
+})
+
+glowRootsButtons.addEventListener('click', (event) => {
+
+    glowRootsButtons.classList.toggle('appear');
+
+    changeLine= document.querySelector('.appear');
+
+    if(glowRootsButtons.classList.contains('appear')){
+
+        changeLine.innerHTML= `fade roots`;
+
+        roots.style.display='';
+        roots.style.opacity='0';
+
+        roots.style.animation= 'appear 1s ease-in-out forwards';
+
+    }else{
+
+        glowRootsButtons.innerHTML= `glow roots`;
+
+        roots.style.opacity='1';
+        
+        roots.style.animation= 'disappear 1s ease-in-out forwards';
+    }
 })
