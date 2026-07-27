@@ -12,6 +12,7 @@ var popup= document.querySelector('.js-count-UI');
 var roots= document.querySelector('.js-roots');
 var leaves= document.querySelectorAll('.js-leaf');
 var umbrella= document.querySelector('.js-umbrella');
+var instructions= document.querySelector('.js-instructions');
 
 skipButton.addEventListener('click',(event) => {
 
@@ -22,6 +23,8 @@ skipButton.addEventListener('click',(event) => {
     roots.style.animation= 'none';
     roots.style.display= 'none';
 
+    instructions.style.display= 'none';
+
 });
 
 roots.addEventListener('animationend',(event) => {
@@ -30,6 +33,8 @@ roots.addEventListener('animationend',(event) => {
       
         roots.style.display='none';
         popup.style.display= 'none';
+
+        instructions.style.display= 'none';
 
     }
    
@@ -42,6 +47,9 @@ function counting(i){
     console.log(i); // Temporary log
     
     count.innerHTML= `${i}`;
+
+    instructions.style.display= 'block';
+    instructions.style.animation= 'appear 0.5s ease-in-out forwards';
    
     i+=1;
 
@@ -61,7 +69,9 @@ function start(i){
     
     setTimeout( function removecount(i){
         count.style.display= 'none'
+
         breatheon();
+
     },800,i);
 
 }
