@@ -2,12 +2,14 @@
 const skipButton= document.querySelector('.js-skip-button');
 const fadeLeavesButton= document.querySelector('.js-fadeleaves-button')
 const glowRootsButtons= document.querySelector('.js-glowroots-button')
+const moveHandButton= document.querySelector('.js-movehand-button');
 
 // div elements
 var count= document.querySelector('.js-div-count');
 var popup= document.querySelector('.js-count-UI');
 var roots= document.querySelector('.js-roots');
 var leaves= document.querySelectorAll('.js-leaf');
+var umbrella= document.querySelector('.js-umbrella');
 
 skipButton.addEventListener('click',(event) => {
    
@@ -131,5 +133,24 @@ glowRootsButtons.addEventListener('click', (event) => {
         roots.style.opacity='1';
         
         roots.style.animation= 'disappear 1s ease-in-out forwards';
+    }
+})
+
+moveHandButton.addEventListener('click',(event) => {
+   
+    moveHandButton.classList.toggle('move');
+
+    umbrella.style.animation= 'none';
+
+    void umbrella.offsetWidth;
+
+    if(moveHandButton.classList.contains('move')) {
+
+        umbrella.style.animation= 'move 3s linear forwards';
+        
+    }else{
+
+        umbrella.style.animation= 'move 3.5s linear reverse forwards';
+
     }
 })
