@@ -1,3 +1,5 @@
+let isSkipped= false;
+
 //Buttons
 const skipButton= document.querySelector('.js-skip-button');
 const fadeLeavesButton= document.querySelector('.js-fadeleaves-button')
@@ -12,10 +14,13 @@ var leaves= document.querySelectorAll('.js-leaf');
 var umbrella= document.querySelector('.js-umbrella');
 
 skipButton.addEventListener('click',(event) => {
+
+    isSkipped= true;
    
     popup.style.display='none';
 
-    roots.style.animation= '';
+    roots.style.animation= 'none';
+    roots.style.display= 'none';
 
 });
 
@@ -23,7 +28,7 @@ roots.addEventListener('animationend',(event) => {
 
     if (event.animationName === 'blink'){
       
-        roots.style.opacity='0';
+        roots.style.display='none';
         popup.style.display= 'none';
 
     }
@@ -62,6 +67,8 @@ function start(i){
 }
 
 function breatheon(){
+
+    if (isSkipped) return;
 
     roots.style.animation= 'blink 10s ease 5';
 
