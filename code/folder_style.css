@@ -72,6 +72,66 @@ header{
 }
 
 /* =========================================
+   Navbar
+   ========================================= */
+.navbar{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    height:100%;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-right: 2px solid white;
+    backdrop-filter: blur(10px);
+    width: min(300px,40%);
+    padding-top: 5px;
+    padding-right: 2px;
+    row-gap: 5px;
+    z-index: 5;
+}
+
+.cross{
+   width: 100%;
+   height: 5%;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.cross button{
+    display: flex;
+    aspect-ratio: 1;
+    min-width: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.cross button img{
+    flex: 0 1 auto;
+    min-width: 0%;
+    opacity: 0.3;
+}
+
+.navbar ul li{
+    font-size: clamp(0.2rem, -0.278rem + 3.825vw, 2rem);
+    padding: 5px;
+}
+
+.navbar ul li a:link{
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    z-index: 4;
+    inset: 0;
+    background-color: #00000011;
+}
+
+/* =========================================
    Main
    ========================================= */
 main{
@@ -160,6 +220,21 @@ main{
     box-shadow: 1px 3px 4px rgba(56, 81, 46, 0.2);
     transition: 0.3s ease-in-out;
 }
+
+
+.navbar ul li a:visited{
+    color: #000;
+}
+
+.navbar ul li a:hover{
+    color: #17496c;
+}
+
+.cross button:hover{
+    background-color: rgba(240, 227, 227, 0.399);
+    transition: 0.4s ease-in-out;
+}
+
 
 a:visited {
   color: #dfb3ff;

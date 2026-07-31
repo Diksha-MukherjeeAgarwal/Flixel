@@ -5,6 +5,7 @@ const skipButton= document.querySelector('.js-skip-button');
 const fadeLeavesButton= document.querySelector('.js-fadeleaves-button')
 const glowRootsButtons= document.querySelector('.js-glowroots-button')
 const moveHandButton= document.querySelector('.js-movehand-button');
+const Hamburger_button= document.querySelector('.js-hamburger-icon');
 
 // div elements
 var count= document.querySelector('.js-div-count');
@@ -13,6 +14,8 @@ var roots= document.querySelector('.js-roots');
 var leaves= document.querySelectorAll('.js-leaf');
 var umbrella= document.querySelector('.js-umbrella');
 var instructions= document.querySelector('.js-instructions');
+var navbar= document.querySelector('.js-navbar');
+var overlay=document.querySelector('.js-overlay');
 
 skipButton.addEventListener('click',(event) => {
 
@@ -86,6 +89,8 @@ function breatheon(){
 
 
 // Button Functions
+Hamburger_button.addEventListener('click',openNavbar);
+
 fadeLeavesButton.addEventListener('click',(event) => {
 
     fadeLeavesButton.classList.toggle('addAnimation');
@@ -171,3 +176,24 @@ moveHandButton.addEventListener('click',(event) => {
 
     }
 })
+
+function openNavbar(event){
+    
+    navbar.style.display= 'flex';
+    overlay.style.display='flex';
+
+    cross_button= document.querySelector('.js-cross');
+    cross_button.addEventListener('click', (event) =>{
+
+        navbar.style.display= 'none';
+        overlay.style.display='none';
+
+    })
+
+    overlay.addEventListener('click', (event) =>{
+
+        navbar.style.display= 'none';
+        overlay.style.display='none';
+
+    })
+}

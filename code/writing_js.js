@@ -10,11 +10,14 @@ const textBox= document.querySelector('.js-text-box');
 const submitButton= document.querySelector('.js-button-submit');
 const cancelButton= document.querySelector('.js-button-cancel');
 const popupContainer= document.querySelector('.js-popup-container');
-
+const Hamburger_button= document.querySelector('.js-hamburger-icon');
+var navbar= document.querySelector('.js-navbar');
+var overlay=document.querySelector('.js-overlay');
 
 // Event Listeners
 submitButton.addEventListener('click',addTopic);
 cancelButton.addEventListener('click',confirmationPopup);
+Hamburger_button.addEventListener('click',openNavbar);
 
 function addTopic(event){                        //Adding the values in variables
    
@@ -109,6 +112,27 @@ function confirmationPopup(event){
         popupContainer.style.display= 'none';
     
     });
+}
+
+function openNavbar(event){
+    
+    navbar.style.display= 'flex';
+    overlay.style.display='flex';
+
+    cross_button= document.querySelector('.js-cross');
+    cross_button.addEventListener('click', (event) =>{
+
+        navbar.style.display= 'none';
+        overlay.style.display='none';
+
+    })
+
+    overlay.addEventListener('click', (event) =>{
+
+        navbar.style.display= 'none';
+        overlay.style.display='none';
+
+    })
 }
 
 // temporary function to remove file

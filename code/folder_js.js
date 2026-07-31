@@ -1,5 +1,33 @@
 html='';
 
+// for Hamburger Button
+const Hamburger_button= document.querySelector('.js-hamburger-icon');
+var navbar= document.querySelector('.js-navbar');
+var overlay=document.querySelector('.js-overlay');
+
+Hamburger_button.addEventListener('click',openNavbar);
+
+function openNavbar(event){
+    
+    navbar.style.display= 'flex';
+    overlay.style.display='flex';
+
+    cross_button= document.querySelector('.js-cross');
+    cross_button.addEventListener('click', (event) =>{
+
+        navbar.style.display= 'none';
+        overlay.style.display='none';
+
+    })
+
+    overlay.addEventListener('click', (event) =>{
+
+        navbar.style.display= 'none';
+        overlay.style.display='none';
+
+    })
+}
+
 // Acessing locally stored  data
 const files= localStorage.getItem('savedFile');
 const openFile = JSON.parse(files);
