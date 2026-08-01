@@ -19,7 +19,7 @@ const Hamburger_button= document.querySelector('.js-hamburger-icon');
 
 // selecting elements
 const searchBar= document.querySelector('.js-search-bar');
-const searchIcon= document.querySelector('.js-search-icon');
+const crossIcon= document.querySelector('.js-cross-icon');
 const outputBox = document.querySelector('.js-output');
 var navbar= document.querySelector('.js-navbar');
 var overlay=document.querySelector('.js-overlay');
@@ -33,7 +33,7 @@ searchBar.addEventListener('click', (event) => {
     suggestionBox.style.display= 'block';
     overlay.style.display='flex';
     searchBar.style.zIndex= '5';
-    searchIcon.style.zIndex= '5';
+    crossIcon.style.zIndex= '5';
 
 
     overlay.addEventListener('click', (event) =>{
@@ -175,6 +175,8 @@ function filterList(event){
         others.style.display = 'none';
     }
 }
+
+crossIcon.addEventListener('click',resetSearchResults);
 
 Hamburger_button.addEventListener('click',openNavbar);
 

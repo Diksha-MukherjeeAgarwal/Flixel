@@ -97,7 +97,7 @@ html, body {
     line-height: normal;
 }
 
-.search-icon{
+.cross-icon{
     display: flex;
     position: relative;
     height: 100%;
@@ -105,16 +105,16 @@ html, body {
     border-radius: 0px 50px 50px 0px;
     background-color: #ffffff;
     border: 2px solid #0a1b08 ;
-    padding: 0.5%;
+    padding: max(1%,5px);
     cursor: pointer;
 
 }
 
 
-.search-icon img{
+.cross-icon img{
     flex: 0 1 auto;
     min-width: 0;
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     z-index: 1;
 }
@@ -391,7 +391,7 @@ main{
     transition: 0.4s ease-in-out;
 }
 
-.search-icon::after{
+.cross-icon::after{
     content: "";
     height: 100%;
     width: 100%;
@@ -404,11 +404,11 @@ main{
     transition: opacity 0.5s ease-in-out;
 }
 
-.search-icon:hover::after{
+.cross-icon:hover::after{
     opacity: 1;
 }
 
-.search-icon:active{
+.cross-icon:active{
     background-color: rgba(196, 226, 255, 0.397);
 }
 
