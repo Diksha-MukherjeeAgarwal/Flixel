@@ -221,6 +221,12 @@ main{
     transition: 0.3s ease-in-out;
 }
 
+.cancel button:active, .open-button:active{
+    background-color: #294726 !important;
+    border: 2px solid black !important;
+    color: white !important;
+}
+
 
 .navbar ul li a:visited{
     color: #000;
@@ -235,6 +241,9 @@ main{
     transition: 0.4s ease-in-out;
 }
 
+.cross button:active{
+    background-color: rgba(240, 227, 227, 0.625) ;
+}
 
 a:visited {
   color: #dfb3ff;

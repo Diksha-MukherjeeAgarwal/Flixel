@@ -355,6 +355,12 @@ main{
     transition: 0.3s ease-in-out;
 }
 
+.buttons:active{
+    background-color: #294726;
+    border: 3px solid black;
+    color: white;
+}
+
 .hamburger-icon::after {
     content: "";
     position: absolute;
@@ -387,8 +393,12 @@ main{
 }
 
 .cross button:hover{
-    background-color: rgba(240, 227, 227, 0.399);
+    background-color: rgba(219, 207, 207, 0.399);
     transition: 0.4s ease-in-out;
+}
+
+.cross button:active{
+    background-color: rgba(240, 227, 227, 0.625) ;
 }
 
 .cross-icon::after{
