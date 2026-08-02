@@ -75,7 +75,7 @@ function showDetails(element){
 
     info= `
           <div class="cancel js-cancel">
-            <button></button>
+            <button><img src="../assets/icons/cross.svg"></button>
           </div>
 
           <div class="row-1">
@@ -90,7 +90,7 @@ function showDetails(element){
 
     loadFile.innerHTML+= info;
     
-    const cancelButton= document.querySelector('.js-cancel');
+    const cancelButton= document.querySelector('.js-cancel button');
 
     cancelButton.addEventListener('click',(event) =>{
 
