@@ -146,11 +146,12 @@ main{
 
 .folder-box{
     width: 100%;
-    min-height: 100px;
+    min-height: 0px;
     background-color: #ffffff;
     border:2px dashed #d2a784;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 .entry{
@@ -179,6 +180,20 @@ main{
     cursor: pointer;
     border: none;
     border-radius: 50px;
+}
+
+.notice{
+    position: absolute;
+    width: 100%;
+    min-height: 0;
+    background-color: #ffffff;
+    border:2px dashed #d2a784;
+    flex-direction: column;
+    font-size: clamp(0.625rem,-0.236rem + 4.594vw, 2.5rem);
+    font-family: "Caveat Brush", cursive;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
 }
 
 /* =========================================
