@@ -20,6 +20,7 @@ var overlay=document.querySelector('.js-overlay');
 skipButton.addEventListener('click',(event) => {
 
     isSkipped= true;
+    clearTimeout(countdownTimer);
    
     popup.style.display='none';
 
@@ -27,6 +28,7 @@ skipButton.addEventListener('click',(event) => {
     roots.style.display= 'none';
 
     instructions.style.display= 'none';
+    instructions.style.animation = 'none'; 
 
 });
 
@@ -43,9 +45,11 @@ roots.addEventListener('animationend',(event) => {
    
 })
 
-setTimeout(counting, 600, 1);
+countdownTimer = setTimeout(counting, 600, 1);
 
 function counting(i){
+
+    if (isSkipped) return; 
 
     console.log(i); // Temporary log
     
