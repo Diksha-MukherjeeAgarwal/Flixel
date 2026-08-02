@@ -216,7 +216,6 @@ main{
     left: 15%;
     top: -7%;
     height: 100%;
-    z-index: 0px; 
 }
 
 .leaves{
@@ -239,14 +238,13 @@ main{
     width: 70%;
     top: -4%;
     left: 15%;
-    z-index: 0px;
 }
 
 .roots{
     position: absolute; 
     left: 15%;
     top: -7%; 
-    z-index: 3px;
+    z-index: 3;
     height: 100%;
 }
 

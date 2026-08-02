@@ -269,7 +269,6 @@ main{
     left: 15%;
     top: -7%;
     height: 100%;
-    z-index: 0px; /* Ensures the branch appears above the tree sketch and roots */
 }
 
 .leaves{
@@ -292,14 +291,13 @@ main{
     width: 70%;
     top: -4%;
     left: 15%;
-    z-index: 0px;
 }
 
 .roots{
     position: absolute; 
     left: 15%;
     top: -7%; /* Adjusts the vertical position of the roots image to better align with the tree sketch */
-    z-index: 3px;
+    z-index: 3;
     height: 100%;
 }
 
