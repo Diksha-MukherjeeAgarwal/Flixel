@@ -20,18 +20,12 @@ cancelButton.addEventListener('click',confirmationPopup);
 Hamburger_button.addEventListener('click',openNavbar);
 
 function addTopic(event){                        //Adding the values in variables
-   
-    /* temporary print */
-    console.log(topic.value);
-    console.log(date.value);
-    console.log(textBox.value);
 
     heading= topic.value;
     dateInput= date.value;
     textInput= textBox.value;
 
-    checkvalues(heading,dateInput,textInput);
-    
+    checkvalues(heading,dateInput,textInput); 
     
 }
 
@@ -56,10 +50,6 @@ function checkvalues(heading,dateInput,textInput){
         
         }
 
-        console.log(heading);
-        console.log(dateInput);
-        console.log(textInput);
-
         storefiles(heading,dateInput,textInput);
    
     }
@@ -68,7 +58,7 @@ function checkvalues(heading,dateInput,textInput){
 
 function storefiles(heading,dateInput,textInput){
    
-    const existingJSON = localStorage.getItem('savedFile');
+    const existingJSON = localStorage.getItem('savedFile'); // 1. open the JSON file
     
     let openFile = [];
 
@@ -85,8 +75,6 @@ function storefiles(heading,dateInput,textInput){
     const updatedJsonString = JSON.stringify(openFile);
     
     localStorage.setItem('savedFile', updatedJsonString);
-    
-    console.log("Updated JSON Data:", updatedJsonString);
 
     window.location.reload();
 

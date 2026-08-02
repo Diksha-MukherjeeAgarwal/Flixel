@@ -56,18 +56,14 @@ searchBar.addEventListener('click', (event) => {
 })
 
 listItem.forEach((item)=>{
-
-    console.log(parsedData);
     
     item.addEventListener('click', (event) =>{
        
         const uiText = item.innerHTML.trim().toLowerCase();
        
         const jsonKey = emotionMap[uiText];
-        console.log(jsonKey); 
-        
+       
         const quotesArray = parsedData[jsonKey]; 
-        console.log(quotesArray);
 
         outputBox.style.display = 'block';
 
@@ -115,10 +111,8 @@ searchBar.addEventListener('keydown',(event) =>{
         const uiText = searchBar.value.toLowerCase().trim();
         
         const jsonKey = emotionMap[uiText];
-        console.log(jsonKey); 
         
-        const quotesArray = parsedData[jsonKey]; 
-        console.log(quotesArray);
+        const quotesArray = parsedData[jsonKey];
 
         outputBox.style.display = 'block';
 
@@ -148,8 +142,6 @@ function filterList(event){
     listItem.forEach(list => {
 
         const textValue= list.textContent || list.innerText;
-
-        console.log(textValue);
 
         if(textValue.toLowerCase().includes(textInput)){
 

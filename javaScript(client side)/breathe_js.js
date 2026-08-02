@@ -50,8 +50,6 @@ countdownTimer = setTimeout(counting, 600, 1);
 function counting(i){
 
     if (isSkipped) return; 
-
-    console.log(i); // Temporary log
     
     count.innerHTML= `${i}`;
 
@@ -69,8 +67,6 @@ function counting(i){
 }
 
 function start(i){
-   
-    console.log('Start'); //Temporary log
     
     count.innerHTML= `Start`;
     
