@@ -194,15 +194,15 @@ function openNavbar(event){
 }
 
 startWriting_button.addEventListener('click', (event) => {
-    window.location.href='writing.html';
+    window.location.href='HTML/writing.html';
 })
 
 breathe_button.addEventListener('click', (event) => {
-    window.location.href='Breathe.html';
+    window.location.href='HTML/Breathe.html';
 })
 
 openFolder_button.addEventListener('click', (event) => {
-    window.location.href='Folder.html';
+    window.location.href='HTML/Folder.html';
 })
 
 function resetSearchResults() {
