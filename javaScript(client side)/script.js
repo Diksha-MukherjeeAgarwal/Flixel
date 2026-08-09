@@ -198,11 +198,11 @@ startWriting_button.addEventListener('click', (event) => {
 })
 
 breathe_button.addEventListener('click', (event) => {
-    window.location.href='HTML/Breathe.html';
+    window.location.href='HTML/breathe.html';
 })
 
 openFolder_button.addEventListener('click', (event) => {
-    window.location.href='HTML/Folder.html';
+    window.location.href='HTML/folder.html';
 })
 
 function resetSearchResults() {
