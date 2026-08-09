@@ -1,6 +1,6 @@
 let parsedData;
 
-fetch("../data/emotionsData.json")
+fetch("data/emotionsData.json")
     .then(response => response.json())
     .then(data => parsedData = data);
 
