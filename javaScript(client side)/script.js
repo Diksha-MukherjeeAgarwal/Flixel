@@ -1,5 +1,8 @@
-const existingJSON = localStorage.getItem('emotionsData');
-const parsedData= JSON.parse(existingJSON);
+let parsedData;
+
+fetch("../data/emotionsData.json")
+    .then(response => response.json())
+    .then(data => parsedData = data);
 
 const emotionMap = {
   "happy": "happy",
