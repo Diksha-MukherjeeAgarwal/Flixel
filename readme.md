@@ -2,7 +2,8 @@
 
 A personal diary web application designed with cozy patterns to provide a safe, comforting space for its users. Please note that while the frontend is fully functional, the backend is currently a work in progress to ensure user files and data are safely secured.
 
-Link of the website:  [View Flixel Here](insert link here)
+Link of the website:  [View Flixel Here](https://diksha-mukherjeeagarwal.github.io/Flixel/)
+
 **(Please be patient as the website may take a moment to load)**
 
 ![Portfolio Preview](assets/background/website.png)
