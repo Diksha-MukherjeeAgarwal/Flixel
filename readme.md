@@ -1,6 +1,6 @@
 # Flixel
 
-A personal diary web application designed with cozy patterns to provide a safe, comforting space for its users. Please note that while the frontend is fully functional, the backend is currently a work in progress to ensure user files and data are safely secured.
+A personal diary web application designed with cozy patterns to provide a stress-free, comforting space for its users. Please note that while the frontend is fully functional, the backend is currently a work in progress to ensure user files and data are safely secured.
 
 Link of the website:  [View Flixel Here](https://diksha-mukherjeeagarwal.github.io/Flixel/)
 
@@ -22,7 +22,9 @@ This project was built using these technologies:
 
 **Fully Responsive:** Optimized for desktop, tablet, and mobile.
 
-**Low Eye Strain:** The background and color palette are specifically designed to reduce eye fatigue.
+**Low Eye fatigue:** The background and color palette are specifically designed to reduce eye fatigue.
+
+**Mood-Based Quotes:** Generate random, mood-specific quotes by searching or clicking on your current emotional state.
 
 **Read & Write:** Full support for reading and writing diary entries.
 
@@ -45,6 +47,7 @@ To get a local copy up and running, follow these simple steps.
 **Secure Database:** Currently, the website stores data in the web browser's own JSON file. This means data can easily be erased via a single console command, making it vulnerable. Integrating a secure backend database to save and protect user files is a top priority.
 
 **Optimized Web Images:** The current website uses WebP images for the background, SVG for icons, and PNGs for the rest. This can cause the site to load slowly on weaker internet connections. I plan to properly optimize and compress these images to improve response times.
+
 *(Note: Because my background images feature soft overlay blur colors, current free SVG converters usually convert those soft blurs into solid blocks, which makes optimization tricky).*
 
 **Edit Documents:** The website currently lacks an option to edit previous documents after they are created.
